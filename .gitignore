@@ -1,0 +1,21 @@
+node_modules/
+dist/
+out/
+
+# Local account/session data and environment files
+accounts.json
+settings.json
+*.log
+.env
+.env.*
+!.env.example
+
+# macOS / editors
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Electron build caches
+.electron/
+release/

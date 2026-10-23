@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self'; script-src 'self'" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Social Switcher</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="service-rail" aria-label="社群平台">
+      <div class="app-mark">S</div>
+      <div id="serviceList" class="service-list"></div>
+    </nav>
+
+    <aside class="sidebar">
+      <header class="brand">
+        <strong id="serviceTitle">Threads</strong>
+        <span>Social Switcher</span>
+      </header>
+      <div id="accountSectionLabel" class="section-label">帳號空間</div>
+      <div id="accountList" class="account-list"></div>
+      <div id="emptyState" class="empty-state hidden">尚未建立帳號空間</div>
+      <button id="addAccount" class="add-button" type="button"><span>＋</span> 新增帳號</button>
+      <section id="projectSidebar" class="project-sidebar hidden">
+        <span>目前追蹤</span>
+        <strong id="projectSidebarCount">0 個對話</strong>
+        <small id="projectSidebarTime">尚未更新</small>
+      </section>
+      <section id="workModePanel" class="work-mode hidden">
+        <div>
+          <strong>上班模式</strong>
+          <span id="workModeStatus">隱藏圖片、影片與限時動態</span>
+        </div>
+        <button id="workModeToggle" class="switch" type="button" role="switch" aria-checked="false" aria-label="切換上班模式"><i></i></button>
+      </section>
+      <footer id="socialToolbar" class="toolbar">
+        <button id="home" type="button" title="回到首頁"><span>⌂</span>首頁</button>
+        <button id="login" class="hidden" type="button" title="登入或切換帳號"><span>↪</span>登入</button>
+        <button id="chat" class="hidden" type="button" title="開啟聊天"><span>◌</span>聊天</button>
+        <button id="reload" type="button" title="重新整理"><span>↻</span>重整</button>
+      </footer>
+    </aside>
+
+    <main id="projectDashboard" class="project-dashboard hidden">
+      <header class="project-header">
+        <div>
+          <span class="eyebrow">PROJECT PULSE</span>
+          <h1>專案對話總覽</h1>
+          <p id="projectRootLabel">尚未選擇專案資料夾</p>
+        </div>
+        <div class="project-actions">
+          <button id="chooseProjectRoot" class="dashboard-secondary" type="button">選擇 Project</button>
+          <button id="refreshProjects" class="dashboard-primary" type="button"><span>↻</span> 更新對話</button>
+        </div>
+      </header>
+
+      <section id="projectStats" class="project-stats"></section>
+      <div id="projectError" class="project-error hidden"></div>
+      <div id="projectEmpty" class="project-empty hidden">
+        <strong>這個 Project 還沒有對話</strong>
+        <span>請選擇 Codex 對話使用的 Project 資料夾。</span>
+      </div>
+      <section id="projectGrid" class="project-grid"></section>
+      <footer class="project-note">名稱直接使用你的 Codex 對話標題；更新時重新讀取狀態與最近活動。</footer>
+    </main>
+
+    <div id="dialogBackdrop" class="dialog-backdrop hidden">
+      <form id="accountDialog" class="dialog">
+        <h2 id="dialogTitle">新增帳號</h2>
+        <p id="dialogHint">建立獨立登入空間後，請在右側登入。</p>
+        <label for="accountName">顯示名稱</label>
+        <input id="accountName" maxlength="30" autocomplete="off" placeholder="例如：工作帳號" />
+        <div class="dialog-actions">
+          <button id="cancelDialog" class="secondary" type="button">取消</button>
+          <button class="primary" type="submit">儲存</button>
+        </div>
+      </form>
+    </div>
+    <script src="renderer.js"></script>
+  </body>
+</html>
