@@ -1,6 +1,6 @@
 {
   "name": "social-switcher",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "A local-first multi-account social hub with a Codex conversation dashboard.",
   "license": "MIT",
   "main": "src/main.js",
