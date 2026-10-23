@@ -4,6 +4,12 @@
 
 > 目前支援 macOS，仍在早期開發階段。各社群網站改版後，部分功能可能需要同步調整。
 
+## 畫面預覽
+
+![Social Switcher 專案對話總覽](docs/images/project-dashboard.png)
+
+> 預覽使用虛構示範資料，不包含任何真實帳號、Cookie、對話內容或本機路徑。
+
 ## 主要功能
 
 - 在最左側快速切換 Threads、Instagram、Reddit、X、Dcard、Facebook。
